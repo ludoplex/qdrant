@@ -17,10 +17,7 @@ def setup(on_disk_vectors, on_disk_payload):
 def compare_vectors(v1, v2):
     if len(v1) != len(v2):
         return False
-    for i in range(len(v1)):
-        if abs(v1[i] - v2[i]) > 1e-5:
-            return False
-    return True
+    return all(abs(v1[i] - v2[i]) <= 1e-5 for i in range(len(v1)))
 
 
 def test_delete_and_search():

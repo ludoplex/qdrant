@@ -79,9 +79,12 @@ def start_cluster_with_corrupted_node(
         segment_json_file.write("borked")
 
     # Restart the peer
-    peer_url = start_peer(peer_dirs[-1], f"peer_0_restarted.log", bootstrap_url, extra_env={
-        "QDRANT__STORAGE__HANDLE_COLLECTION_LOAD_ERRORS": "true"
-    })
+    peer_url = start_peer(
+        peer_dirs[-1],
+        "peer_0_restarted.log",
+        bootstrap_url,
+        extra_env={"QDRANT__STORAGE__HANDLE_COLLECTION_LOAD_ERRORS": "true"},
+    )
 
     wait_for_peer_online(peer_url)
 

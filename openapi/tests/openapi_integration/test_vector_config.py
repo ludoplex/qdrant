@@ -225,7 +225,7 @@ def test_disable_indexing(on_disk_vectors):
 
 
 def insert_vectors(collection_name='test_collection', count=2000, size=256):
-    ids = [x for x in range(count)]
+    ids = list(range(count))
     vectors = [[random.random() for _ in range(size)] for _ in range(count)]
 
     batch_size = 1000
