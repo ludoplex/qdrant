@@ -22,7 +22,7 @@ walkdir = "2.3.3"
 rstest = "0.18.1"
 
 [target.'cfg(not(target_os = "windows"))'.dev-dependencies]
-pprof = { version = "0.12", features = ["flamegraph", "prost-codec"] }
+pprof = { version = "0.15", features = ["flamegraph", "prost-codec"] }
 
 
 [dependencies]
@@ -49,7 +49,7 @@ geo = "0.26.0"
 geohash = "0.13.0"
 num-traits = "0.2.16"
 num-derive = "0.4.0"
-rand = "0.8"
+rand = "0.10"
 bitvec = "1.0.1"
 seahash = "4.1.0"
 tar = "0.4.40"

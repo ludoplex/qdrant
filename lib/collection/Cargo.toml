@@ -14,13 +14,13 @@ criterion = "0.5"
 rstest = "0.18.1"
 
 [target.'cfg(not(target_os = "windows"))'.dev-dependencies]
-pprof = { version = "0.12", features = ["flamegraph", "prost-codec"] }
+pprof = { version = "0.15", features = ["flamegraph", "prost-codec"] }
 
 [dependencies]
 
 parking_lot = "0.12"
 
-rand = "0.8.5"
+rand = "0.10.1"
 thiserror = "1.0"
 serde = { version = "~1.0", features = ["derive"] }
 serde_json = { version = "~1.0", features = ["std"] }
@@ -31,7 +31,7 @@ ordered-float = "3.7"
 hashring = "0.3.2"
 tinyvec = { version = "1.6.0", features = ["alloc"] }
 
-tokio = {version = "~1.29", features = ["full"]}
+tokio = {version = "~1.51", features = ["full"]}
 futures = "0.3.28"
 atomicwrites = "0.4.1"
 log = "0.4"
